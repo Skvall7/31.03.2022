@@ -1,15 +1,16 @@
 import random
-print('Загадайте число от 1 до 100, я постараюсь отгадать.')
+
 start, end = 1, 100
+print('Загадайте число от 1 до 100, я постараюсь отгадать.')
 input('Нажмите любую клавишу')
 while True:
     number = random.randint(start, end)
     print(f'Число {number} я угадал?')
     answer = input('Введите ваш ответ: ')
     if answer == '<':
-        end = number
+        end = number - 1
     elif answer == '>':
-        start = number
+        start = number + 1
     elif answer == '=':
         print(f'Ура я отгадал! {number} верное число.')
         break
