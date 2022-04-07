@@ -16,3 +16,10 @@ while True:
         break
     else:
         print('Я такое не понимаю, если больше ">", если меньше "<", если равно "=". Так я сумею понять.')
+    if start == end:
+        print(f'Других вариантов то нет, {number} ваше число!')
+        break
+    if end == number or start == number:
+        print('Так не может быть, начнем с начала')
+        start, end = 1, 100
+
