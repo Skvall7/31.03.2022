@@ -19,13 +19,13 @@ enemy = {'name': 'Страшный', 'health': 110, 'damage': 40, 'armor': 1.3}
 print(player, enemy)
 
 
+def clear_damage(player_1_d, player_2_a):
+    return player_1_d / player_2_a
+
+
 def attack(player_1, player_2):
-    def clear_damage(player_1_d, player_2_a):
-        player_1_d['damage'] /= player_2_a['armor']
-        return int(player_1_d['damage'])
-    save = player_1['damage']
-    player_2['health'] -= clear_damage(player_1, player_2)
-    player_1['damage'] = save
+    damage = clear_damage(player_1['damage'], player_2['armor'])
+    player_2['health'] -= damage
     return player_1, player_2
 
 
